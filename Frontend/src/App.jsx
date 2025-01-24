@@ -1,25 +1,14 @@
-import { useState } from "react";
-import ChatHistory from './components/ChatHistory'
-import ChatInput from './components/ChatInput'
+import React from 'react';
+import Chatbot from './components/Chatbot';
+import './index.css';
 
 const App = () => {
-
-  const [messages, setMessages] = useState([]);
-
-  const handleSendMessage = (message) => {
-    setMessages((prevMessages) => [
-      ...prevMessages,
-      { text: message, sender: "user" },
-      { text: "AI's response goes here", sender: "ai" }, // Replace with AI's actual response
-    ]);
-  };
-
   return (
-    <div className="flex flex-col justify-between h-screen bg-gray-100 p-4">
-      <ChatHistory messages={messages} />
-      <ChatInput onSendMessage={handleSendMessage} />
+    <div className="app text-center p-4">
+      <h1 className="text-2xl font-bold mb-4">AI-Powered Chatbot</h1>
+      <Chatbot />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
