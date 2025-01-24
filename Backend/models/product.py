@@ -12,4 +12,4 @@ class Product(Base):
     description = Column(String)
     supplier_id = Column(Integer, ForeignKey('suppliers.id'))
 
-    supplier = relationship("Supplier", back_populates="products")  
+    supplier = relationship("Supplier", back_populates="products")

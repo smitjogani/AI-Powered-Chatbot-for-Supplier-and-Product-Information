@@ -1,6 +1,6 @@
 from langgraph import LangGraph, Node
 from services.database_service import get_db
-from services.llm_service.py import summarize_text
+from services.llm_service import summarize_text
 from models.product import Product
 from models.supplier import Supplier
 
